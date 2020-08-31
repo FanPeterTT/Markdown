@@ -715,3 +715,152 @@ $$
 ---
 
 ### 图表
+
+#### 序列图
+
+Typora提供的序列图语法标记功能是基于开源项目[js-sequence-diagrams](https://bramp.github.io/js-sequence-deagrams)
+
+语法：
+
+```markdown
+​```sequence
+js-sequence-diagrams 语法
+​```
+```
+
+示例：
+
+```sequence
+张三->李四:李四，吃了吗？
+Note right of 李四:我显示在李四的右边
+李四->张三: 好久不见，三儿，我刚吃过！
+```
+
+#### 流程图
+
+Typora 提供的流程图语法标记是基于开源项目[flowchart.js](http://flowchart.js.org/)
+
+语法：
+
+```markdown
+​```flow
+flowchart 语法
+​```
+```
+
+示例：
+
+```flow
+st=>start: 开始
+op=>operation: 我是帅哥
+cond=>condition: Yes or No?
+e=>end: 结束
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+
+```
+
+#### Mermaid
+
+Typora 继承了Mermaid, Mermaid 支持使用文本的方式生成图表
+
+##### Mermaid 序列图语法
+
+[语法参考链接](https://knsv.github.io/mermaid/#loops32)
+
+示例：
+
+```markdown
+​```makdown
+%% 序列图举例（注释）
+sequenceDiagram
+	张三->>李四: 吃了吗？
+	李四-->>张三: 好久不见，三儿，我刚吃过！
+	Note right of 李四: 我显示在李四的右边
+​```
+```
+
+```mermaid
+%% 序列图举例（注释）
+sequenceDiagram
+	张三->>李四: 吃了吗？
+	李四-->>张三: 好久不见，三儿，我刚吃过！
+	Note right of 李四: 我显示在李四的右边
+```
+
+##### Mermaid 流程图
+
+[语法参考链接](https://github.io/mermaid/#graph18)
+
+示例：
+
+```markdown
+​```mermaid
+graph TD
+A[开始] -->B(我是帅哥)
+B --> C{Yes or No?}
+C -->|Yes| D[结束]
+C -->|No| B
+​```
+```
+
+
+
+```mermaid
+graph TD
+A[开始] -->B(我是帅哥)
+B --> C{Yes or No?}
+C -->|Yes| D[结束]
+C -->|No| B
+```
+
+##### Mermaid 甘特图
+
+[语法参考链接](http://knsv.github.io.mermai/index.html#/mermaid-cli)
+
+示例：
+
+```mermaid
+%% 甘特图示例
+gantt
+dateFormat YYYY-MM-DD
+	title 项目开发周期
+	
+section 需求评审
+需求评审 	:2018-01-01,2018-01-02
+section 功能开发
+开发编码	:2018-01-03,2018-01-08
+开发自测	:2018-01-08,2018-01-09
+section 项目测试
+第一轮测试	:2018-01-09,2018-01-14
+第二轮测试	:2018-01-14,2018-01-16
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
